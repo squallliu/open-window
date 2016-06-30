@@ -1,0 +1,7 @@
+.open-window > .scroll {
+  height: 100%;
+}
+.open-window > .scroll > iframe {
+  min-width: 100%;
+  min-height: 100%;
+}
