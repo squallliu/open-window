@@ -7,7 +7,7 @@ whcyitModule.factory('cyOpenWindow', ['$rootScope', '$ionicModal', '$sce', funct
         '<h1 class="title" ng-bind-html="::title"></h1>' +
         '<button class="button button-clear button-icon {{::close}}" ng-click="closeModal()"></button>' +
       '</ion-header-bar>' +
-      '<ion-content scroll="true" style="" class="no-padding open-window">' +
+      '<ion-content scroll="true" class="no-padding open-window" ng-class="{\'has-header\': title}">' +
         '<iframe data-tap-disabled="true" ng-src="{{url}}"></iframe>' +
       '</ion-content>' +
     '</ion-modal-view>';
