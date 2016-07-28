@@ -4,7 +4,6 @@ angular.module('whcyit-open-window', ['ionic']);
   angular.module('whcyit-open-window', ['ionic']).factory('cyOpenWindow', ['$rootScope', '$ionicModal', '$sce', function ($rootScope, $ionicModal, $sce) {
     var modalTemplate =
       '<ion-modal-view>' +
-        '<cy-immerse-bar ng-if="isImmerse" bar-class="bar-{{::theme}}"></cy-immerse-bar>' +
         '<ion-header-bar align-title="center" class="bar bar-{{::theme}}" ng-if="title">' +
           '<h1 class="title" ng-bind-html="::title"></h1>' +
           '<button class="button button-clear button-icon {{::close}}" ng-click="closeModal()"></button>' +
@@ -21,7 +20,6 @@ angular.module('whcyit-open-window', ['ionic']);
           url: 'about:blank',
           theme: 'positive',
           title: '',
-          isImmerse: document.body.querySelector('.status-bar') ? true : false,
           close: ionic.Platform.isAndroid() ? 'ion-android-close' : 'ion-ios-close',
           onmessage: angular.noop
         }, opts);
